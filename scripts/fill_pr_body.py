@@ -19,6 +19,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+REPO = "https://github.com/PolicyEngine/reform-benefit-list-copies"
 REVIEWS = HERE.parent / "pr_body"
 POLICY_ORDER = [
     "Current law",
@@ -132,10 +133,11 @@ def tx_senior_note(probe_log):
         sys.exit("refusing: the Texas-only run shows seniors leaving poverty under the rebate")
     return (
         f"Under the Texas rebate, senior SPM poverty after the fix equals current law's rate. "
-        f"The rebate adds up to ${max_added} to each poor senior's resources, but in a run of the "
-        f"Texas households alone (`tx_only_probe.py`, which reproduces the national run's Texas SPM "
-        f"benefits, ${national}bn), the closest of the {poor} poor Texas senior records falls "
-        f"${min_gap} short of its threshold, so none crosses it."
+        f"The rebate adds up to ${max_added} to each poor senior's resources. A run of the Texas "
+        f"households alone ([`tx_only_probe.py`]({REPO}/blob/main/scripts/tx_only_probe.py)) "
+        f"reproduces the national current-law run's Texas SPM benefits, ${national}bn, and finds "
+        f"the closest of the {poor} poor Texas senior records ${min_gap} short of its "
+        f"threshold, so none crosses it."
     )
 
 
@@ -233,12 +235,12 @@ def ecpa_child_note(runs_dir):
     return (
         f"Under both End Child Poverty Act versions, the fix lifts {people27:,.0f} people out "
         f"of SPM poverty in 2027, yet the child rate moves by less than 10⁻⁸ percentage "
-        f"points. Runs of the {states} states where the fix changes SPM benefits "
-        f"(`fix_probe.py`, which reproduces each national run's SPM benefits in every one of "
-        f"them) show why. Under either version, the people who leave poverty in 2027 comprise "
-        f"{leave27['adults 18-64'][1]:,} adults and {leave27['seniors 65+'][1]:,} seniors. "
-        f"The fix also lifts the same {c27['records']} child records under both versions, "
-        f"but their weights sum to {c27['weight']:.3f} people: in those states "
+        f"points. A rerun of both sides on the {states} states where the fix changes SPM "
+        f"benefits ([`fix_probe.py`]({REPO}/blob/main/scripts/fix_probe.py)) reproduces each "
+        f"national run's SPM benefits in every one of them. Under either version, "
+        f"{leave27['adults 18-64'][1]:,} adults and {leave27['seniors 65+'][1]:,} seniors "
+        f"leave poverty in those runs, along with {c27['records']} child records whose "
+        f"weights sum to {c27['weight']:.3f} people. In those states "
         f"{light['under_one']:,} of {light['records']:,} child records carry weights under "
         f"one person, together {light['under_one_weight']:,.0f} of "
         f"{light['children'] / 1e6:.1f} million children. In 2024, under the End Child "
@@ -264,13 +266,13 @@ def impact_section(render, runs_dir):
         f"`{b['dataset']}`: {runs} runs, one per policy, year and side. They measure this "
         f"PR's change on main as of {before}: the before runs use {before}, and the after "
         f"runs use this branch at {after}, which is {before} plus this PR's model changes. "
-        f"Since then the branch has changed tests and the Makefile, merged main's later "
+        f"Since then the branch has changed tests, comments and the Makefile, merged main's later "
         f"commits, which change none of this PR's files apart from one test, and added the "
         f"two calls that mark the benefit lists modified. Core reads that flag only when a "
         f"simulation turns its macro cache on, and these runs leave it off, so the two calls "
-        f"change no figure here. The script, "
-        f"`reform_lists.py`, records each run's commit and dataset, and "
-        f"`render_reform_lists.py` builds these tables and checks from its output. "
+        f"change no figure here. [PolicyEngine/reform-benefit-list-copies]({REPO}) holds the "
+        f"scripts and every run's output: `reform_lists.py` records each run's commit and "
+        f"dataset, and `render_reform_lists.py` builds these tables and checks from its output. "
         f"Poverty rates give the weighted share of people in SPM poverty, counting everyone under 18 as a child and everyone 65 or older as a senior."
     )
     if not all(acp_ebb_zero(runs_dir, year) for year in b["year_tables"]):
@@ -279,16 +281,16 @@ def impact_section(render, runs_dir):
         parts.append(f"### {year}")
         if year == "2024":
             parts.append(
-                "The End Child Poverty Act only, in a year when ACP still paid: the "
+                "The 2024 runs cover the End Child Poverty Act alone, to size the old "
+                "copies' double count of ACP and EBB in a year when ACP still paid. The "
                 "model reads each year's caps on January 1, when ACP's stood at $30 a "
-                "month, $75 on Tribal lands. EBB's cap reaches zero in March 2022 and "
+                "month, $75 on Tribal lands. EBB's cap reached zero in March 2022 and "
                 "ACP's in June 2024, so EBB pays nothing in either year and ACP nothing "
                 "in 2027. ACP pays the lesser of its cap and the family's broadband cost "
                 "after Lifeline, and the pinned dataset carries no broadband costs, so "
-                "ACP pays nothing in 2024 either: every run here records no ACP or EBB "
-                "payments. The old copies' double count of them therefore changes no "
-                "figure in these tables; the three Tlaib YAML files and invariant 5 "
-                "check it for families that receive ACP or EBB."
+                "every run here records no ACP or EBB payments. The double count "
+                "therefore changes no figure in these tables; the three Tlaib YAML files "
+                "and invariant 5 check it for families that receive ACP or EBB."
             )
         parts.append("\n".join(b["year_tables"][year]))
     parts.append("### Where each change comes from")

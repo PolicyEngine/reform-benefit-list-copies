@@ -1,0 +1,35 @@
+## mutate_helper.py at 24b3d552fd, Hypothesis derandomized (CI profile)
+real helper: passes
+killed: stop on the newer value's first day (off by one) (AssertionError: )
+killed: no stop date (overwrites newer values) (AssertionError: )
+killed: names not deduplicated (AssertionError: )
+killed: None values not skipped (TypeError: argument of type 'NoneType' is not a container or iterable)
+killed: oldest value first (ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions))
+killed: names added even when present (ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions))
+killed: sorts the names it is given (AssertionError: )
+killed: extends a member list in place (AssertionError: )
+killed: clears the member list it read (AssertionError: )
+killed: sets values without Parameter.update (AssertionError: )
+killed: dedupes member lists in place (AssertionError: )
+killed: marks the parameter only when it adds a name (ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions))
+killed: marks the parameter but not the nodes above it (ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions))
+killed: sets values, clears the node cache, flags only the parameter (AssertionError: )
+exit 0
+
+## mutate_helper.py at 24b3d552fd, --random
+real helper: passes
+killed: stop on the newer value's first day (off by one) (AssertionError: )
+killed: no stop date (overwrites newer values) (AssertionError: )
+killed: names not deduplicated (AssertionError: )
+killed: None values not skipped (TypeError: argument of type 'NoneType' is not a container or iterable)
+killed: oldest value first (ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions))
+killed: names added even when present (ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions))
+killed: sorts the names it is given (AssertionError: )
+killed: extends a member list in place (AssertionError: )
+killed: clears the member list it read (AssertionError: )
+killed: sets values without Parameter.update (AssertionError: )
+killed: dedupes member lists in place (AssertionError: )
+killed: marks the parameter only when it adds a name (ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions))
+killed: marks the parameter but not the nodes above it (ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions))
+killed: sets values, clears the node cache, flags only the parameter (AssertionError: )
+exit 0
