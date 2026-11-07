@@ -1,0 +1,38 @@
+states: 19 AK CA CT ME MI MN NH NJ NV NY OK PA RI SD UT VT WA WI WY
+{'person': 64739, 'household': 22469, 'tax_unit': 31533, 'spm_unit': 23545, 'family': 25676, 'marital_unit': 50797, '_time_period': 1}
+saved end_child_poverty_act 2027 before at e53b426082
+      324.89 real       120.37 user         7.97 sys
+          4039966720  maximum resident set size
+saved end_child_poverty_act 2027 after at ee75695b5a
+      313.02 real       129.56 user         7.22 sys
+          4691591168  maximum resident set size
+saved end_child_poverty_act 2024 before at e53b426082
+      226.13 real       117.80 user         7.25 sys
+          4038574080  maximum resident set size
+saved end_child_poverty_act 2024 after at ee75695b5a
+      152.19 real       123.01 user         5.81 sys
+          4883480576  maximum resident set size
+end_child_poverty_act 2027: before at e53b426082, after at ee75695b5a
+  before: subset reproduces the national run's SPM benefits in all 19 states, largest gap $0
+  after: subset reproduces the national run's SPM benefits in all 19 states, largest gap $0
+  children: in poverty before 1415 records (3,327,815), after 1411 (3,327,815); leave poverty 4 (0); enter 0 (0)
+    resources rise for 309 records (1,176,209), 28 of them in poverty before (83,631)
+    among those in poverty whose resources rise: rise min $35, median $400, max $25,269; gap min $476, median $7,760; largest rise/gap 1.882 (rise $25,269, gap $13,424)
+  adults 18-64: in poverty before 3060 records (9,856,222), after 3055 (9,839,464); leave poverty 5 (16,758); enter 0 (0)
+    resources rise for 842 records (5,073,821), 117 of them in poverty before (922,552)
+    among those in poverty whose resources rise: rise min $35, median $475, max $25,269; gap min $297, median $8,770; largest rise/gap 2.442 (rise $12,370, gap $5,066)
+  seniors 65+: in poverty before 730 records (2,894,123), after 716 (2,807,716); leave poverty 14 (86,407); enter 0 (0)
+    resources rise for 500 records (2,034,277), 158 of them in poverty before (923,993)
+    among those in poverty whose resources rise: rise min $35, median $479, max $12,660; gap min $297, median $8,365; largest rise/gap 4.717 (rise $3,647, gap $773)
+end_child_poverty_act 2024: before at e53b426082, after at ee75695b5a
+  before: subset reproduces the national run's SPM benefits in all 19 states, largest gap $0
+  after: subset reproduces the national run's SPM benefits in all 19 states, largest gap $0
+  children: in poverty before 1175 records (2,540,299), after 1167 (2,512,399); leave poverty 8 (27,901); enter 0 (0)
+    resources rise for 318 records (1,216,218), 30 of them in poverty before (81,810)
+    among those in poverty whose resources rise: rise min $120, median $405, max $23,464; gap min $103, median $5,468; largest rise/gap 29.369 (rise $4,344, gap $148)
+  adults 18-64: in poverty before 2749 records (8,445,290), after 2736 (8,334,121); leave poverty 13 (111,169); enter 0 (0)
+    resources rise for 858 records (5,125,649), 116 of them in poverty before (873,425)
+    among those in poverty whose resources rise: rise min $47, median $479, max $23,464; gap min $39, median $6,827; largest rise/gap 6.927 (rise $7,624, gap $1,101)
+  seniors 65+: in poverty before 760 records (2,845,462), after 740 (2,742,919); leave poverty 20 (102,543); enter 0 (0)
+    resources rise for 520 records (2,144,567), 173 of them in poverty before (955,536)
+    among those in poverty whose resources rise: rise min $47, median $479, max $13,237; gap min $39, median $6,771; largest rise/gap 29.369 (rise $4,344, gap $148)

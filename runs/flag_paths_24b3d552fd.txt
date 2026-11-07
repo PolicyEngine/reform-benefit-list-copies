@@ -1,0 +1,9 @@
+baseline: spm_unit_benefits=False household_benefits=False household_state_benefits=False | gov.household=False
+tx_rebate object: spm_unit_benefits=True household_benefits=False household_state_benefits=True | gov.household=True
+tx_rebate via in_effect: spm_unit_benefits=True household_benefits=False household_state_benefits=True | gov.household=True
+end_child_poverty_act object: spm_unit_benefits=True household_benefits=True household_state_benefits=False | gov.household=True
+end_child_poverty_act via in_effect: spm_unit_benefits=True household_benefits=True household_state_benefits=False | gov.household=True
+edaa_end_child_poverty_act object: spm_unit_benefits=True household_benefits=True household_state_benefits=False | gov.household=True
+edaa_end_child_poverty_act via in_effect: spm_unit_benefits=True household_benefits=True household_state_benefits=False | gov.household=True
+boost object: spm_unit_benefits=True household_benefits=True household_state_benefits=False | gov.household=True
+boost via in_effect: spm_unit_benefits=True household_benefits=True household_state_benefits=False | gov.household=True

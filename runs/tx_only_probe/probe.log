@@ -1,0 +1,32 @@
+{'person': 5782, 'household': 1875, 'tax_unit': 2538, 'spm_unit': 1917, 'family': 2040, 'marital_unit': 4541, '_time_period': 1}
+WARNING:root:The dataset contains 190 column(s) that do not match any variable in the tax-benefit system and were ignored: ACTC_CRD, AGI, ANN_VAL, A_AGE, A_ENRLW, A_EXPRRP, A_FAMREL, A_FAMTYP, A_FNLWGT, A_FTPT, … (180 more)
+WARNING:root:The dataset contains 190 column(s) that do not match any variable in the tax-benefit system and were ignored: ACTC_CRD, AGI, ANN_VAL, A_AGE, A_ENRLW, A_EXPRRP, A_FAMREL, A_FAMTYP, A_FNLWGT, A_FTPT, … (180 more)
+Texas SPM benefits, current law ($bn): subset 142.796 national run 142.796
+Texas SPM benefits, rebate minus current law ($bn): 16.164
+children: records 1770, weighted 8,162,701; poor under current law 404 records (1,659,107); under the rebate 371 (1,451,085); poor records whose gap is below what the rebate adds: 33
+   poor records' gaps ($): min 70, 10th pct 1,786, median 11,439
+   what the rebate adds to poor records' resources ($): min 429, median 1,500, max 1,500
+adults 18-64: records 3376, weighted 19,366,938; poor under current law 540 records (2,912,681); under the rebate 494 (2,680,624); poor records whose gap is below what the rebate adds: 46
+   poor records' gaps ($): min 70, 10th pct 1,961, median 11,908
+   what the rebate adds to poor records' resources ($): min 150, median 1,500, max 1,500
+seniors 65+: records 636, weighted 4,459,839; poor under current law 48 records (494,133); under the rebate 48 (494,133); poor records whose gap is below what the rebate adds: 0
+   poor records' gaps ($): min 1,502, 10th pct 1,860, median 9,838
+   what the rebate adds to poor records' resources ($): min 600, median 1,500, max 1,500
+       59.79 real        48.16 user         3.94 sys
+          3663822848  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              257127  page reclaims
+                  17  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               38576  voluntary context switches
+              174948  involuntary context switches
+        596543381366  instructions retired
+        222321914505  cycles elapsed
+          3591605344  peak memory footprint

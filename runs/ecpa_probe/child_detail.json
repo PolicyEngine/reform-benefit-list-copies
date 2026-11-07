@@ -1,0 +1,46 @@
+{
+  "crossing_2027": {
+    "records": 4,
+    "weight": 0.004991605848772451,
+    "max_weight": 0.0015332428738474846
+  },
+  "crossing_2027_edaa": {
+    "records": 4,
+    "weight": 0.004991605848772451,
+    "same_records": true
+  },
+  "light_children_2027": {
+    "records": 17245,
+    "under_one": 12630,
+    "under_one_weight": 617.0109845599873,
+    "children": 29829595.05254485
+  },
+  "crossing_2024": {
+    "records": 8,
+    "weight": 27900.824093863688
+  },
+  "heaviest_2024": {
+    "2024": {
+      "state": "CA",
+      "age": 3.0,
+      "weight": 27900.759765625,
+      "poor_before": true,
+      "poor_after": false,
+      "resources_before": 54392.765625,
+      "threshold": 54974.0234375,
+      "gap": 581.2578125,
+      "rise": 2879.28125
+    },
+    "2027": {
+      "state": "CA",
+      "age": 3.0,
+      "weight": 28521.666015625,
+      "poor_before": true,
+      "poor_after": true,
+      "resources_before": 57449.1328125,
+      "threshold": 62117.453125,
+      "gap": 4668.3203125,
+      "rise": 2879.28125
+    }
+  }
+}

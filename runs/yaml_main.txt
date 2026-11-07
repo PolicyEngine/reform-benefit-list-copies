@@ -1,0 +1,181 @@
+=== tx_rebate
+============================= test session starts ==============================
+platform darwin -- Python 3.14.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main
+configfile: pyproject.toml
+plugins: anyio-4.12.1, hypothesis-6.168.3
+collected 3 items
+
+policyengine_us/tests/policy/reform/tx_rebate_counts_every_baseline_benefit.yaml FF.
+
+=================================== FAILURES ===================================
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/tx_rebate_counts_every_baseline_benefit.yaml:
+  Test 'Under the Texas rebate, Wyoming's SSI supplement counts in both benefit totals.':
+    spm_unit_benefits@2027: [0.] differs from 240.0 with an absolute margin [240.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/tx_rebate_counts_every_baseline_benefit.yaml:
+  Test 'Under the Texas rebate, California's SSI supplement counts in both benefit totals.':
+    spm_unit_benefits@2027: [0.] differs from 2000.0 with an absolute margin [2000.] > 0.001
+=============================== warnings summary ===============================
+../pe-us-10226-local/.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1290
+  /Users/maxghenis/PolicyEngine/_clones/pe-us-10226-local/.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1290: PytestAssertRewriteWarning: Module already imported so cannot be rewritten; anyio
+    self._mark_plugins_for_rewrite(hook, disable_autoload)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED policyengine_us/tests/policy/reform/tx_rebate_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/tx_rebate_counts_every_baseline_benefit.yaml::
+=================== 2 failed, 1 passed, 1 warning in 24.64s ====================
+=== end_child_poverty_act
+============================= test session starts ==============================
+platform darwin -- Python 3.14.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main
+configfile: pyproject.toml
+plugins: anyio-4.12.1, hypothesis-6.168.3
+collected 7 items
+
+policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml FFFFFFF
+
+=================================== FAILURES ===================================
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under ECPA, Washington's SSI supplement and State Family Assistance count in both benefit totals.':
+    spm_unit_benefits@2026: [0.] differs from 1300.0 with an absolute margin [1300.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under ECPA, New York's SSI supplement counts in both benefit totals.':
+    spm_unit_benefits@2026: [0.] differs from 1052.0 with an absolute margin [1052.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under ECPA, West Virginia's child care subsidy counts in SPM benefits.':
+    spm_unit_benefits@2026: [0.] differs from 3000.0 with an absolute margin [3000.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under ECPA, the Affordable Connectivity Program counts once in SPM net income.':
+    spm_unit_benefits@2023: [360.] differs from 0.0 with an absolute margin [360.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under ECPA, the Emergency Broadband Benefit counts once in SPM net income.':
+    spm_unit_benefits@2021: [120.] differs from 0.0 with an absolute margin [120.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under ECPA, the Commodity Supplemental Food Program counts in household benefits.':
+    household_benefits@2024: [0.] differs from 600.0 with an absolute margin [600.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under ECPA, health benefits count in household benefits when the switch is on.':
+    household_benefits@2024: [0.] differs from 2000.0 with an absolute margin [2000.] > 0.001
+=============================== warnings summary ===============================
+../pe-us-10226-local/.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1290
+  /Users/maxghenis/PolicyEngine/_clones/pe-us-10226-local/.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1290: PytestAssertRewriteWarning: Module already imported so cannot be rewritten; anyio
+    self._mark_plugins_for_rewrite(hook, disable_autoload)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/end_child_poverty_act_counts_every_baseline_benefit.yaml::
+======================== 7 failed, 1 warning in 41.71s =========================
+=== edaa_end_child_poverty_act
+============================= test session starts ==============================
+platform darwin -- Python 3.14.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main
+configfile: pyproject.toml
+plugins: anyio-4.12.1, hypothesis-6.168.3
+collected 7 items
+
+policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml FFFFF..
+
+=================================== FAILURES ===================================
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under EDAA, Washington's SSI supplement and State Family Assistance count in both benefit totals.':
+    spm_unit_benefits@2026: [0.] differs from 1300.0 with an absolute margin [1300.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under EDAA, New York's SSI supplement counts in both benefit totals.':
+    spm_unit_benefits@2026: [0.] differs from 1052.0 with an absolute margin [1052.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under EDAA, West Virginia's child care subsidy counts in SPM benefits.':
+    spm_unit_benefits@2026: [0.] differs from 3000.0 with an absolute margin [3000.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under EDAA, the Affordable Connectivity Program counts once in SPM net income.':
+    spm_unit_benefits@2023: [360.] differs from 0.0 with an absolute margin [360.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml:
+  Test 'Under EDAA, the Emergency Broadband Benefit counts once in SPM net income.':
+    spm_unit_benefits@2021: [120.] differs from 0.0 with an absolute margin [120.] > 0.001
+=============================== warnings summary ===============================
+../pe-us-10226-local/.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1290
+  /Users/maxghenis/PolicyEngine/_clones/pe-us-10226-local/.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1290: PytestAssertRewriteWarning: Module already imported so cannot be rewritten; anyio
+    self._mark_plugins_for_rewrite(hook, disable_autoload)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/edaa_end_child_poverty_act_counts_every_baseline_benefit.yaml::
+=================== 5 failed, 2 passed, 1 warning in 36.39s ====================
+=== boost
+============================= test session starts ==============================
+platform darwin -- Python 3.14.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main
+configfile: pyproject.toml
+plugins: anyio-4.12.1, hypothesis-6.168.3
+collected 7 items
+
+policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml FFFFFFF
+
+=================================== FAILURES ===================================
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml:
+  Test 'Under BOOST, Washington's SSI supplement and State Family Assistance count in both benefit totals.':
+    spm_unit_benefits@2026: [0.] differs from 1300.0 with an absolute margin [1300.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml:
+  Test 'Under BOOST, New York's SSI supplement counts in both benefit totals.':
+    spm_unit_benefits@2026: [0.] differs from 1052.0 with an absolute margin [1052.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml:
+  Test 'Under BOOST, West Virginia's child care subsidy counts in SPM benefits.':
+    spm_unit_benefits@2026: [0.] differs from 3000.0 with an absolute margin [3000.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml:
+  Test 'Under BOOST, the Affordable Connectivity Program counts once in SPM net income.':
+    spm_unit_benefits@2023: [360.] differs from 0.0 with an absolute margin [360.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml:
+  Test 'Under BOOST, the Emergency Broadband Benefit counts once in SPM net income.':
+    spm_unit_benefits@2021: [120.] differs from 0.0 with an absolute margin [120.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml:
+  Test 'Under BOOST, the Commodity Supplemental Food Program counts in household benefits.':
+    household_benefits@2024: [0.] differs from 600.0 with an absolute margin [600.] > 0.001
+_________________________________ test session _________________________________
+/Users/maxghenis/PolicyEngine/_clones/pe-us-10226-main/policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml:
+  Test 'Under BOOST, health benefits count in household benefits when the switch is on.':
+    household_benefits@2024: [0.] differs from 2000.0 with an absolute margin [2000.] > 0.001
+=============================== warnings summary ===============================
+../pe-us-10226-local/.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1290
+  /Users/maxghenis/PolicyEngine/_clones/pe-us-10226-local/.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1290: PytestAssertRewriteWarning: Module already imported so cannot be rewritten; anyio
+    self._mark_plugins_for_rewrite(hook, disable_autoload)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml::
+FAILED policyengine_us/tests/policy/reform/boost_counts_every_baseline_benefit.yaml::
+======================== 7 failed, 1 warning in 35.61s =========================

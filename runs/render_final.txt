@@ -1,0 +1,184 @@
+Before (main): ['e53b426082']; after (branch): ['ee75695b5a']
+Dataset: ['hf://datasets/policyengine/populace-us/populace_us_2024.h5@populace-us-2024-spm-20260909']
+Files: {'baseline after': ['baseline_after.json'], 'baseline before': ['baseline_before.json'], 'boost_middle_class_tax_credit after': ['boost_middle_class_tax_credit_after.json'], 'boost_middle_class_tax_credit before': ['boost_middle_class_tax_credit_before.json'], 'edaa_end_child_poverty_act after': ['edaa_end_child_poverty_act_after.json'], 'edaa_end_child_poverty_act before': ['edaa_end_child_poverty_act_before.json'], 'end_child_poverty_act after': ['end_child_poverty_act_after.json'], 'end_child_poverty_act before': ['end_child_poverty_act_before.json'], 'tx_rebate after': ['tx_rebate_after.json'], 'tx_rebate before': ['tx_rebate_before.json']}
+
+### 2027
+
+| Policy | SPM benefits before ($bn) | After | Change | SPM poverty before | After | Change (pp) | People in SPM poverty, change | Child SPM poverty, change (pp) | Household benefits, change ($bn) |
+|---|---|---|---|---|---|---|---|---|---|
+| Current law | 2,171.61 | 2,171.61 | +0.00 | 14.42% | 14.42% | +0.000 | +0 | +0.000 | +0.00 |
+| Texas rebate | 2,184.70 | 2,187.77 | +3.07 | 14.36% | 14.29% | -0.065 | -225,435 | -0.111 | +0.00 |
+| End Child Poverty Act | 2,647.40 | 2,651.36 | +3.96 | 11.10% | 11.07% | -0.030 | -103,165 | -0.000 | +5.43 |
+| EDAA End Child Poverty Act | 2,647.96 | 2,651.92 | +3.96 | 10.98% | 10.95% | -0.030 | -103,165 | -0.000 | +0.00 |
+| BOOST Act | 2,167.65 | 2,171.61 | +3.96 | 9.66% | 9.58% | -0.076 | -264,730 | -0.015 | +5.43 |
+
+Decomposition, 2027 ($m): change = programs the copy lacked − programs it counted that the baseline does not
+
+| Policy | Aggregate | Change | Lacked | Counted extra | Expected | Residual |
+|---|---|---|---|---|---|---|
+| Current law | `spm_unit_benefits` | +0.0 | 0.0 (0) | 0.0 (none) | +0.0 | +0 dollars |
+| Current law | `household_benefits` | +0.0 | 0.0 (0) | 0.0 (none) | +0.0 | +0 dollars |
+| Texas rebate | `spm_unit_benefits` | +3,071.3 | 3,071.3 (19) | 0.0 (none) | +3,071.3 | +325 dollars |
+| Texas rebate | `household_benefits` | +0.0 | 0.0 (0) | 0.0 (none) | +0.0 | +0 dollars |
+| End Child Poverty Act | `spm_unit_benefits` | +3,956.9 | 3,956.9 (46) | 0.0 (acp, ebb) | +3,956.9 | +172 dollars |
+| End Child Poverty Act | `household_benefits` | +5,431.5 | 5,431.5 (2) | 0.0 (none) | +5,431.5 | -168 dollars |
+| EDAA End Child Poverty Act | `spm_unit_benefits` | +3,956.9 | 3,956.9 (46) | 0.0 (acp, ebb) | +3,956.9 | +337 dollars |
+| EDAA End Child Poverty Act | `household_benefits` | +0.0 | 0.0 (0) | 0.0 (none) | +0.0 | +0 dollars |
+| BOOST Act | `spm_unit_benefits` | +3,956.9 | 3,956.9 (46) | 0.0 (acp, ebb) | +3,956.9 | +376 dollars |
+| BOOST Act | `household_benefits` | +5,431.5 | 5,431.5 (2) | 0.0 (none) | +5,431.5 | -160 dollars |
+
+Largest state changes in SPM benefits, 2027 ($m):
+
+- Texas rebate: 13 states change; CA +2,502.9, NY +223.4, WI +119.4, PA +71.8, NJ +52.7, OK +36.0, NH +21.0, RI +15.6
+  state changes sum to +3,071.3; national +3,071.3
+- End Child Poverty Act: 19 states change; CA +2,502.9, MN +329.0, WA +306.0, NY +223.4, CT +159.7, WI +119.4, PA +71.8, NJ +52.7
+  state changes sum to +3,956.9; national +3,956.9
+- EDAA End Child Poverty Act: 19 states change; CA +2,502.9, MN +329.0, WA +306.0, NY +223.4, CT +159.7, WI +119.4, PA +71.8, NJ +52.7
+  state changes sum to +3,956.9; national +3,956.9
+- BOOST Act: 19 states change; CA +2,502.9, MN +329.0, WA +306.0, NY +223.4, CT +159.7, WI +119.4, PA +71.8, NJ +52.7
+  state changes sum to +3,956.9; national +3,956.9
+
+Own benefit and poverty detail, 2027:
+
+| Policy | Own benefit ($bn), before → after | SPM poverty | Child | Senior | Deep SPM poverty | People in SPM poverty, change | People in deep SPM poverty, change |
+|---|---|---|---|---|---|---|---|
+| Current law | none | 14.4211% → 14.4211% | 18.6483% → 18.6483% | 11.1210% → 11.1210% | 3.3337% → 3.3337% | +0 | +0 |
+| Texas rebate | `tx_rebate` 16.16 → 16.16 | 14.3593% → 14.2945% | 18.4939% → 18.3829% | 11.2047% → 11.1210% | 3.3219% → 3.3104% | -225,435 | -39,993 |
+| End Child Poverty Act | `ecpa_child_benefit` 479.75 → 479.75 | 11.0965% → 11.0669% | 10.7278% → 10.7278% | 10.8954% → 10.7572% | 2.6422% → 2.6109% | -103,165 | -108,726 |
+| EDAA End Child Poverty Act | `ecpa_child_benefit` 480.31 → 480.31 | 10.9765% → 10.9468% | 10.4178% → 10.4178% | 10.8298% → 10.6916% | 2.6062% → 2.5749% | -103,165 | -108,726 |
+| BOOST Act | `boost_middle_class_tax_credit` 534.96 → 534.96 | 9.6602% → 9.5841% | 12.3962% → 12.3807% | 7.5592% → 7.3718% | 1.8367% → 1.8288% | -264,730 | -27,625 |
+
+### 2024
+
+| Policy | SPM benefits before ($bn) | After | Change | SPM poverty before | After | Change (pp) | People in SPM poverty, change | Child SPM poverty, change (pp) | Household benefits, change ($bn) |
+|---|---|---|---|---|---|---|---|---|---|
+| End Child Poverty Act | 2,246.15 | 2,250.17 | +4.02 | 9.97% | 9.89% | -0.071 | -241,613 | -0.036 | +3.83 |
+
+Decomposition, 2024 ($m): change = programs the copy lacked − programs it counted that the baseline does not
+
+| Policy | Aggregate | Change | Lacked | Counted extra | Expected | Residual |
+|---|---|---|---|---|---|---|
+| End Child Poverty Act | `spm_unit_benefits` | +4,019.8 | 4,019.8 (46) | 0.0 (acp, ebb) | +4,019.8 | -72 dollars |
+| End Child Poverty Act | `household_benefits` | +3,825.7 | 3,825.7 (2) | 0.0 (none) | +3,825.7 | -3 dollars |
+
+Largest state changes in SPM benefits, 2024 ($m):
+
+- End Child Poverty Act: 19 states change; CA +2,592.5, MN +375.2, WA +285.0, NY +193.3, CT +125.9, WI +122.8, PA +78.9, NJ +51.6
+  state changes sum to +4,019.8; national +4,019.8
+
+Own benefit and poverty detail, 2024:
+
+| Policy | Own benefit ($bn), before → after | SPM poverty | Child | Senior | Deep SPM poverty | People in SPM poverty, change | People in deep SPM poverty, change |
+|---|---|---|---|---|---|---|---|
+| End Child Poverty Act | `ecpa_child_benefit` 431.89 → 431.89 | 9.9657% → 9.8947% | 8.5386% → 8.5022% | 11.1370% → 10.9694% | 2.3952% → 2.3537% | -241,613 | -141,203 |
+
+## Checks
+
+- PASS one commit per side
+- PASS one dataset
+- PASS Current law 2027: program totals equal on both sides (88 programs)
+- PASS Current law 2027: every program total computed (88)
+- PASS Current law 2027: spm_unit_benefits_module from the baseline before, the baseline after
+- PASS Current law 2027: household_benefits_module from the baseline before, the baseline after
+- PASS Current law 2027: main has no SPM list parameter
+- PASS Current law 2027: branch SPM list = baseline 77 + []
+- PASS Current law 2027: people unchanged
+- PASS Current law 2027: spm_unit_market_income unchanged
+- PASS Current law 2027: household_market_income unchanged
+- PASS Current law 2027: household_state_benefits unchanged
+- PASS Current law 2027: acp unchanged
+- PASS Current law 2027: ebb unchanged
+- PASS Current law 2027: change in spm_unit_net_income = change in spm_unit_benefits
+- PASS Current law 2027: change in household_net_income = change in household_benefits
+- PASS Current law 2027: spm_unit_benefits change = lacked − counted extra
+- PASS Current law 2027: household_benefits change = lacked − counted extra
+- PASS Current law 2027: every number equal on both sides (16)
+- PASS Current law 2027: every state total equal on both sides
+- PASS Current law 2027: branch list is the 77-program baseline
+- PASS Texas rebate 2027: program totals equal on both sides (89 programs)
+- PASS Texas rebate 2027: every program total computed (89)
+- PASS Texas rebate 2027: spm_unit_benefits_module from a reform before, the baseline after
+- PASS Texas rebate 2027: household_benefits_module from the baseline before, the baseline after
+- PASS Texas rebate 2027: main has no SPM list parameter
+- PASS Texas rebate 2027: branch SPM list = baseline 77 + ['tx_rebate']
+- PASS Texas rebate 2027: people unchanged
+- PASS Texas rebate 2027: spm_unit_market_income unchanged
+- PASS Texas rebate 2027: household_market_income unchanged
+- PASS Texas rebate 2027: household_state_benefits unchanged
+- PASS Texas rebate 2027: acp unchanged
+- PASS Texas rebate 2027: ebb unchanged
+- PASS Texas rebate 2027: own_benefit_total unchanged
+- PASS Texas rebate 2027: change in spm_unit_net_income = change in spm_unit_benefits
+- PASS Texas rebate 2027: change in household_net_income = change in household_benefits
+- PASS Texas rebate 2027: spm_unit_benefits change = lacked − counted extra
+- PASS Texas rebate 2027: household_benefits change = lacked − counted extra
+- PASS End Child Poverty Act 2027: program totals equal on both sides (89 programs)
+- PASS End Child Poverty Act 2027: every program total computed (89)
+- PASS End Child Poverty Act 2027: spm_unit_benefits_module from a reform before, the baseline after
+- PASS End Child Poverty Act 2027: household_benefits_module from a reform before, the baseline after
+- PASS End Child Poverty Act 2027: main has no SPM list parameter
+- PASS End Child Poverty Act 2027: branch SPM list = baseline 77 + ['ecpa_child_benefit']
+- PASS End Child Poverty Act 2027: people unchanged
+- PASS End Child Poverty Act 2027: spm_unit_market_income unchanged
+- PASS End Child Poverty Act 2027: household_market_income unchanged
+- PASS End Child Poverty Act 2027: household_state_benefits unchanged
+- PASS End Child Poverty Act 2027: acp unchanged
+- PASS End Child Poverty Act 2027: ebb unchanged
+- PASS End Child Poverty Act 2027: own_benefit_total unchanged
+- PASS End Child Poverty Act 2027: change in spm_unit_net_income = change in spm_unit_benefits
+- PASS End Child Poverty Act 2027: change in household_net_income = change in household_benefits
+- PASS End Child Poverty Act 2027: spm_unit_benefits change = lacked − counted extra
+- PASS End Child Poverty Act 2027: household_benefits change = lacked − counted extra
+- PASS EDAA End Child Poverty Act 2027: program totals equal on both sides (89 programs)
+- PASS EDAA End Child Poverty Act 2027: every program total computed (89)
+- PASS EDAA End Child Poverty Act 2027: spm_unit_benefits_module from a reform before, the baseline after
+- PASS EDAA End Child Poverty Act 2027: household_benefits_module from a reform before, the baseline after
+- PASS EDAA End Child Poverty Act 2027: main has no SPM list parameter
+- PASS EDAA End Child Poverty Act 2027: branch SPM list = baseline 77 + ['ecpa_child_benefit']
+- PASS EDAA End Child Poverty Act 2027: people unchanged
+- PASS EDAA End Child Poverty Act 2027: spm_unit_market_income unchanged
+- PASS EDAA End Child Poverty Act 2027: household_market_income unchanged
+- PASS EDAA End Child Poverty Act 2027: household_state_benefits unchanged
+- PASS EDAA End Child Poverty Act 2027: acp unchanged
+- PASS EDAA End Child Poverty Act 2027: ebb unchanged
+- PASS EDAA End Child Poverty Act 2027: own_benefit_total unchanged
+- PASS EDAA End Child Poverty Act 2027: change in spm_unit_net_income = change in spm_unit_benefits
+- PASS EDAA End Child Poverty Act 2027: change in household_net_income = change in household_benefits
+- PASS EDAA End Child Poverty Act 2027: spm_unit_benefits change = lacked − counted extra
+- PASS EDAA End Child Poverty Act 2027: household_benefits change = lacked − counted extra
+- PASS BOOST Act 2027: program totals equal on both sides (89 programs)
+- PASS BOOST Act 2027: every program total computed (90)
+- PASS BOOST Act 2027: spm_unit_benefits_module from a reform before, the baseline after
+- PASS BOOST Act 2027: household_benefits_module from a reform before, the baseline after
+- PASS BOOST Act 2027: main has no SPM list parameter
+- PASS BOOST Act 2027: branch SPM list = baseline 77 + ['boost_middle_class_tax_credit_paid_through_ssa']
+- PASS BOOST Act 2027: people unchanged
+- PASS BOOST Act 2027: spm_unit_market_income unchanged
+- PASS BOOST Act 2027: household_market_income unchanged
+- PASS BOOST Act 2027: household_state_benefits unchanged
+- PASS BOOST Act 2027: acp unchanged
+- PASS BOOST Act 2027: ebb unchanged
+- PASS BOOST Act 2027: own_benefit_total unchanged
+- PASS BOOST Act 2027: change in spm_unit_net_income = change in spm_unit_benefits
+- PASS BOOST Act 2027: change in household_net_income = change in household_benefits
+- PASS BOOST Act 2027: spm_unit_benefits change = lacked − counted extra
+- PASS BOOST Act 2027: household_benefits change = lacked − counted extra
+- PASS End Child Poverty Act 2024: program totals equal on both sides (89 programs)
+- PASS End Child Poverty Act 2024: every program total computed (89)
+- PASS End Child Poverty Act 2024: spm_unit_benefits_module from a reform before, the baseline after
+- PASS End Child Poverty Act 2024: household_benefits_module from a reform before, the baseline after
+- PASS End Child Poverty Act 2024: main has no SPM list parameter
+- PASS End Child Poverty Act 2024: branch SPM list = baseline 77 + ['ecpa_child_benefit']
+- PASS End Child Poverty Act 2024: people unchanged
+- PASS End Child Poverty Act 2024: spm_unit_market_income unchanged
+- PASS End Child Poverty Act 2024: household_market_income unchanged
+- PASS End Child Poverty Act 2024: household_state_benefits unchanged
+- PASS End Child Poverty Act 2024: acp unchanged
+- PASS End Child Poverty Act 2024: ebb unchanged
+- PASS End Child Poverty Act 2024: own_benefit_total unchanged
+- PASS End Child Poverty Act 2024: change in spm_unit_net_income = change in spm_unit_benefits
+- PASS End Child Poverty Act 2024: change in household_net_income = change in household_benefits
+- PASS End Child Poverty Act 2024: spm_unit_benefits change = lacked − counted extra
+- PASS End Child Poverty Act 2024: household_benefits change = lacked − counted extra
+
+106 of 106 checks pass
